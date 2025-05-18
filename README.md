@@ -27,7 +27,7 @@ python --version
 
 ## Installation
 
-Download the script under the `releases` section of this repository. Place the script in the root directory of the project you want documentation in.
+Download the script under the [releases](https://github.com/a22Dv/releases) section of this repository. Place the script in the root directory of the project you want documentation in.
 
  It is recommended to run this script with a virtual environment due to the sheer number of dependencies `sphinx` requires. To create one, run:
 ```
