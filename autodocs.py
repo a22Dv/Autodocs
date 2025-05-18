@@ -24,10 +24,10 @@ INCLUDE_PATH: Path = Path("include")
 # ------------------------------------------------------ Project Settings ------------------------------------------------------ #
 
 # Options: "Python", "Python/C++", "C++"
-PROJECT_LANGUAGE: str = "Python/C++"
-PROJECT_NAME: str = "Hailstone"
-AUTHOR_NAME: str = "a22Dv"
-PROJECT_RELEASE: str = "0.5.0"
+PROJECT_LANGUAGE: str = "Python"
+PROJECT_NAME: str = "Project Name"
+AUTHOR_NAME: str = "Author"
+PROJECT_RELEASE: str = "0.0"
 LANGUAGE: str = "en"
 
 # ------------------------------------------------------ Style Settings ------------------------------------------------------ #
@@ -74,7 +74,7 @@ sphinx_conf_py_extensions: List[str] = [
     "sphinx.ext.githubpages",
 ]
 
-if PROJECT_LANGUAGE in ("C++", "Python/C++"):
+if PROJECT_LANGUAGE in ("C++", "Python/C++"): # type: ignore
     sphinx_conf_py_extensions.append("breathe")
 
 sphinx_conf_py_setup_lines: List[str] = [
@@ -97,6 +97,9 @@ custom_css_lines: List[str] = [
     f"  --font-stack: {FONT_FAMILY_MAIN} !important;",
     "}",
     ".sig-name {",
+    "   color: var(--color-link) !important;",
+    "}",
+    ".sig-prename.descclassname {",
     "   color: var(--color-link) !important;",
     "}",
     "div.docutils.container {",
@@ -130,7 +133,7 @@ if PROJECT_LANGUAGE in ("C++", "Python/C++"):  # type: ignore
     )
 
 
-if PROJECT_LANGUAGE in ("Python", "Python/C++"):
+if PROJECT_LANGUAGE in ("Python", "Python/C++"): # type: ignore
     sphinx_conf_py_setup_lines.insert(
         0,
         f"import sys\nimport os\nsys.path.insert(0, os.path.abspath('../../{str(PY_PATH).replace('\\', '/')}'))",

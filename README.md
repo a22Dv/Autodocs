@@ -76,9 +76,12 @@ or
 python autodocs.py --rebuild
 ```
 
+### Sample Output
+![Sample Output](./public/sample.png)
+
 ### Disclaimer
 >[!CAUTION]
-> There are some issues within this script that might've slipped past me, as it has only been tested in my environment as this script is mostly for my own personal use.
+> There are some issues within this script that might've slipped past me, as it has only been tested in my environment since this script is mostly for my own personal use.
 
 ## License
 
