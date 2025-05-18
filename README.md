@@ -9,13 +9,13 @@ A rough and quick setup script for Doxygen -> Breathe -> Sphinx documentation pi
 
 ## Requirements
 
-This script is primarily for Windows systems. This has only been tested in my environment. (Windows 11 24H2)
+> [!WARNING]
+> This script is primarily for Windows systems. This has only been tested in my environment. (Windows 11 24H2), though it might work for other environments, it's untested.
 
 Ensure Python 3.9 or greater is installed in your system. To check, run:
 ```
 python --version
 ```
-in your terminal.
 
 ## Installation
 
@@ -32,10 +32,7 @@ Inside the virtual environment, run:
 pip install sphinx furo
 ```
 
-## Language Support
-
-### Python
-If you only need Python support, you can skip this section, Sphinx is enough.
+Sphinx is the primary way this script generates the documents, with Furo being the theme installed. Though you can change this under Advanced Settings within the script.
 
 ### C++
 This script also supports C++, Python, or both of them. If you need C++ support, make sure Doxygen is installed in your system. You can do so at [Doxygen](https://doxygen.nl/)'s homepage. Then run: 
@@ -45,6 +42,9 @@ pip install breathe
 
 ## How to use
 Open the script, and set the following variables according to your project's configurations:
+
+> [!WARNING] 
+> These settings are case-sensitive. Options are listed on top of the variables in the script itself.
 
 ```
 CPP_PATH: Path = Path("src/cpp/")
@@ -76,11 +76,9 @@ or
 python autodocs.py --rebuild
 ```
 
-
-## Issues
-
 ### Disclaimer
-There are quite a lot of issues within this script that might've slipped past me, it has only been tested in my environment and for my usage as this script is mostly for my own personal use.
+>[!CAUTION]
+> There are some issues within this script that might've slipped past me, as it has only been tested in my environment as this script is mostly for my own personal use.
 
 ## License
 
