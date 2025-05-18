@@ -7,6 +7,8 @@
 
 A rough and quick setup script for Doxygen -> Breathe -> Sphinx documentation pipelines.
 
+AutoDocs simplifies the setup of a Doxygen, Breathe, and Sphinx documentation pipeline, allowing the user to quickly generate professional-looking documentation for any Python and/or C++ projects with minimal configuration.
+
 ## Requirements
 
 > [!WARNING]
@@ -16,6 +18,12 @@ Ensure Python 3.9 or greater is installed in your system. To check, run:
 ```
 python --version
 ```
+>[!NOTE]
+>If your project includes C++, ensure Doxygen is installed in your system. To check, run:
+>```
+>doxygen -v
+>```
+> Get Doxygen at [Doxygen](https://doxygen.nl/)'s homepage.
 
 ## Installation
 
@@ -27,6 +35,11 @@ python -m venv venv
 ```
 in the directory of your project.
 
+After activating with:
+```
+venv/scripts/activate
+```
+
 Inside the virtual environment, run:
 ```
 pip install sphinx furo
@@ -35,7 +48,7 @@ pip install sphinx furo
 Sphinx is the primary way this script generates the documents, with Furo being the theme installed. Though you can change this under Advanced Settings within the script.
 
 ### C++
-This script also supports C++, Python, or both of them. If you need C++ support, make sure Doxygen is installed in your system. You can do so at [Doxygen](https://doxygen.nl/)'s homepage. Then run: 
+This script also supports C++, Python, or both of them. If you need C++ support, make sure Doxygen is installed in your system. Then run: 
 ```
 pip install breathe
 ```
